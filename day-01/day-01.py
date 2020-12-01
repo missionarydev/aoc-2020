@@ -1,27 +1,30 @@
-with open("day-01-input.txt", 'r') as f:
-    numbers = []
-    for line in f:
-        numbers.append(int(line))
+numbers = []
 
-    for i in range(len(numbers)):
-        for j in range(len(numbers)):
-            if numbers[i] + numbers[j] == 2020:
-                print(f"product: {numbers[i] * numbers[j]}, pair (i,j): {numbers[i]},{numbers[j]}")
-                break
-        else:
-            continue
-        break
 
-    for i in range(len(numbers)):
-        for j in range(len(numbers)):
-            for k in range(len(numbers)):
-                if numbers[i] + numbers[j] + numbers[k] == 2020:
-                    print(
-                        f"product: {(numbers[i] * numbers[j]) * numbers[k]}, triplet (i,j,k): {numbers[i]},{numbers[j]},{numbers[k]}")
-                    break
-            else:
-                continue
-            break
-        else:
-            continue
-        break
+def run():
+    with open("day-01-input.txt", 'r') as f:
+        for line in f:
+            numbers.append(int(line))
+    part_1()
+    part_2()
+
+
+def part_1():
+    for a in numbers:
+        for b in numbers:
+            if a + b == 2020:
+                print(a * b)
+                return
+
+
+def part_2():
+    for a in numbers:
+        for b in numbers:
+            for c in numbers:
+                if a + b + c == 2020:
+                    print(a * b * c)
+                    return
+
+
+if __name__ == '__main__':
+    run()
