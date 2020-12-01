@@ -1,2 +1,4 @@
 # aoc-2020
-Advent of Code for 2020 https://adventofcode.com/
+### Advent of Code https://adventofcode.com/
+* Primarily going to be using some JVM language (plain-old Java or Kotlin) and Python to complete the puzzles
+* Each day will be in it's own directory ```/day-##```
