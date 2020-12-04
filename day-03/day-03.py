@@ -42,5 +42,5 @@ def part_two():
 
 if __name__ == '__main__':
     load_data()
-    part_one(1, 3)
+    print(part_one(1, 3))
     part_two()
