@@ -39,7 +39,7 @@ def part_two(data):
     for i in range(min(seats), max(seats)):
         if i not in seats and i + 1 in seats and i - 1 in seats:
             print(f"My seat is {i}")
-
+            
 
 def run():
     data = load_data()
